@@ -17,6 +17,9 @@ defmodule ManyToManyWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/users", UserController
+    resources "/tags", TagController
+    resources "/images", ImageController
   end
 
   # Other scopes may use custom stacks.

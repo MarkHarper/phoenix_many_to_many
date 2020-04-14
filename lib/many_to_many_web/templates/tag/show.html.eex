@@ -1,0 +1,19 @@
+<h1>Show Tag</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @tag.name %>
+
+    <div>
+      <%= for image <- @tag.images do %>
+        <img src="<%= image.url %>" />
+      <% end %>
+    </div>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.tag_path(@conn, :edit, @tag) %></span>
+<span><%= link "Back", to: Routes.tag_path(@conn, :index) %></span>
